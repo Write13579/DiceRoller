@@ -21,4 +21,14 @@ function rollDice() {
       diceImages.innerHTML = images.join(``);
     }
   }
+
+  const sum = document.getElementById(`sum`);
+  let adding = 0;
+
+  if (sum) {
+    for (let i = 0; i < values.length; i++) {
+      adding += values[i];
+    }
+    sum.textContent = `sum: ${adding.toString()}`;
+  }
 }
